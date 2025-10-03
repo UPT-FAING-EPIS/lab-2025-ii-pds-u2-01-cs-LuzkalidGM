@@ -20,20 +20,22 @@ jobs:
 
     - name: Restore dependencies
       run: dotnet restore
+      working-directory: ./Bank
 
     - name: Run unit tests
       run: dotnet test --logger trx --results-directory ./TestResults
+      working-directory: ./Bank
 
     - name: Upload test results
       uses: actions/upload-artifact@v4
       with:
         name: test-results
-        path: ./TestResults
+        path: ./Bank/TestResults
 
     - name: Analyze with SonarCloud
       uses: sonarsource/sonarcloud-github-action@v2
       with:
-        projectBaseDir: .
+        projectBaseDir: ./Bank
         args: >
           -Dsonar.organization=${{ secrets.SONAR_ORGANIZATION }}
           -Dsonar.projectKey=${{ secrets.SONAR_PROJECT_KEY }}
@@ -55,6 +57,8 @@ jobs:
 
     - name: Build NuGet package
       run: dotnet pack Bank.Domain/Bank.Domain.csproj -c Release -o ./nuget
+      working-directory: ./Bank
 
     - name: Publish NuGet package
       run: dotnet nuget push ./nuget/*.nupkg -k ${{ secrets.GITHUB_TOKEN }} -s https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json
+      working-directory: ./Bank
