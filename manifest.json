@@ -1,0 +1,291 @@
+{
+  "source_base_path": "/home/runner/work/lab-2025-ii-pds-u2-01-cs-LuzkalidGM/lab-2025-ii-pds-u2-01-cs-LuzkalidGM/Bank",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Cobertura/SummaryGithub.md",
+      "output": {
+        ".html": {
+          "relative_path": "Cobertura/SummaryGithub.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "disenio.md",
+      "output": {
+        ".html": {
+          "relative_path": "disenio.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Bank.Domain.Class1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Bank.Domain.Class1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Bank.Domain.Class1",
+      "Summary": "<p sourcefile=\"docs/Bank.Domain.Class1.yml\" sourcestartlinenumber=\"1\">Clase de ejemplo para demostración.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Bank.Domain.CreditCardFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Bank.Domain.CreditCardFactory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Bank.Domain.CreditCardFactory",
+      "Summary": "<p sourcefile=\"docs/Bank.Domain.CreditCardFactory.yml\" sourcestartlinenumber=\"1\">Fábrica para crear instancias de tarjetas de crédito basadas en el tipo.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Bank.Domain.CreditCardFactoryMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Bank.Domain.CreditCardFactoryMethod.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Bank.Domain.CreditCardFactoryMethod",
+      "Summary": "<p sourcefile=\"docs/Bank.Domain.CreditCardFactoryMethod.yml\" sourcestartlinenumber=\"1\">Clase abstracta que define el método de fábrica para crear tarjetas de crédito.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Bank.Domain.ICreditCard.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Bank.Domain.ICreditCard.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Bank.Domain.ICreditCard",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Bank.Domain.MoneyBack.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Bank.Domain.MoneyBack.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Bank.Domain.MoneyBack",
+      "Summary": "<p sourcefile=\"docs/Bank.Domain.MoneyBack.yml\" sourcestartlinenumber=\"1\">Representa una tarjeta de crédito MoneyBack.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Bank.Domain.MoneyBackFactoryMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Bank.Domain.MoneyBackFactoryMethod.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Bank.Domain.MoneyBackFactoryMethod",
+      "Summary": "<p sourcefile=\"docs/Bank.Domain.MoneyBackFactoryMethod.yml\" sourcestartlinenumber=\"1\">Fábrica para crear instancias de tarjetas MoneyBack.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Bank.Domain.Platinum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Bank.Domain.Platinum.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Bank.Domain.Platinum",
+      "Summary": "<p sourcefile=\"docs/Bank.Domain.Platinum.yml\" sourcestartlinenumber=\"1\">Representa una tarjeta de crédito Platinum.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Bank.Domain.PlatinumFactoryMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Bank.Domain.PlatinumFactoryMethod.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Bank.Domain.PlatinumFactoryMethod",
+      "Summary": "<p sourcefile=\"docs/Bank.Domain.PlatinumFactoryMethod.yml\" sourcestartlinenumber=\"1\">Fábrica para crear instancias de tarjetas Platinum.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Bank.Domain.Tests.CreditCardTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Bank.Domain.Tests.CreditCardTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Bank.Domain.Tests.CreditCardTests",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Bank.Domain.Tests.Tests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Bank.Domain.Tests.Tests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Bank.Domain.Tests.Tests",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Bank.Domain.Tests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Bank.Domain.Tests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Bank.Domain.Tests",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Bank.Domain.Titanium.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Bank.Domain.Titanium.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Bank.Domain.Titanium",
+      "Summary": "<p sourcefile=\"docs/Bank.Domain.Titanium.yml\" sourcestartlinenumber=\"1\">Representa una tarjeta de crédito Titanium.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Bank.Domain.TitaniumFactoryMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Bank.Domain.TitaniumFactoryMethod.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Bank.Domain.TitaniumFactoryMethod",
+      "Summary": "<p sourcefile=\"docs/Bank.Domain.TitaniumFactoryMethod.yml\" sourcestartlinenumber=\"1\">Fábrica para crear instancias de tarjetas Titanium.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Bank.Domain.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Bank.Domain.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Bank.Domain",
+      "Summary": null
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
