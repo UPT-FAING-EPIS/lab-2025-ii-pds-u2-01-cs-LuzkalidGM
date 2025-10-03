@@ -1,0 +1,60 @@
+name: Package NuGet
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '7.x'
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Run unit tests
+      run: dotnet test --logger trx --results-directory ./TestResults
+
+    - name: Upload test results
+      uses: actions/upload-artifact@v3
+      with:
+        name: test-results
+        path: ./TestResults
+
+    - name: Analyze with SonarCloud
+      uses: sonarsource/sonarcloud-github-action@v2
+      with:
+        projectBaseDir: .
+        args: >
+          -Dsonar.organization=${{ secrets.SONAR_ORGANIZATION }}
+          -Dsonar.projectKey=${{ secrets.SONAR_PROJECT_KEY }}
+          -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }}
+          -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+
+  package:
+    needs: test
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '7.x'
+
+    - name: Build NuGet package
+      run: dotnet pack Bank.Domain/Bank.Domain.csproj -c Release -o ./nuget
+
+    - name: Publish NuGet package
+      run: dotnet nuget push ./nuget/*.nupkg -k ${{ secrets.GITHUB_TOKEN }} -s https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json

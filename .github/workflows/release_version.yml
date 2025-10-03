@@ -1,0 +1,39 @@
+name: Release Version
+
+on:
+  workflow_dispatch:
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '7.x'
+
+    - name: Build NuGet package
+      run: dotnet pack Bank.Domain/Bank.Domain.csproj -c Release -o ./nuget
+
+    - name: Create GitHub Release
+      uses: actions/create-release@v1
+      with:
+        tag_name: v${{ github.run_number }}
+        release_name: Release ${{ github.run_number }}
+        body: |
+          Release version ${{ github.run_number }}.
+        draft: false
+        prerelease: false
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Upload NuGet package to release
+      uses: actions/upload-release-asset@v1
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./nuget/*.nupkg
+        asset_name: Bank.Domain.${{ github.run_number }}.nupkg
+        asset_content_type: application/zip
