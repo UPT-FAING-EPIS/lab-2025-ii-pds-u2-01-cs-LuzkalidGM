@@ -1,3 +1,7 @@
+# Diagrama de Diseño - Factory Method Pattern
+
+Este archivo contiene el diagrama de clases para el patrón Factory Method implementado para el sistema de tarjetas de crédito. Para ver la versión standalone del diagrama, consulte: mermaid.md
+
 ```mermaid
 classDiagram
 
