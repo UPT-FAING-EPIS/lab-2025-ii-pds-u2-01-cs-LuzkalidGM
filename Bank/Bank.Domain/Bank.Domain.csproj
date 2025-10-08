@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     
     <!-- Package properties -->
-    <PackageId>UPT-FAING-EPIS.Bank.Domain</PackageId>
+    <PackageId>lab-2025-ii-pds-u2-01-cs-LuzkalidGM.Bank.Domain</PackageId>
     <Version>1.0.0</Version>
     <Authors>UPT-FAING-EPIS</Authors>
     <Company>UPT-FAING-EPIS</Company>
