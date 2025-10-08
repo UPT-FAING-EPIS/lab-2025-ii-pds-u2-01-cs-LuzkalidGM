@@ -74,12 +74,17 @@ jobs:
       run: ls -la ./nuget/
       working-directory: ./Bank
 
+    - name: List existing NuGet sources
+      run: dotnet nuget list source
+      working-directory: ./Bank
+
     - name: Configure NuGet source and API Key
       run: |
-        dotnet nuget add source https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json --name "github" --username ${{ github.actor }} --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text
-        dotnet nuget setapikey ${{ secrets.GITHUB_TOKEN }} --source "github"
+        dotnet nuget remove source "github" || true
+        dotnet nuget remove source "github-packages" || true
+        dotnet nuget add source https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json --name "github-packages" --username ${{ github.actor }} --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text
       working-directory: ./Bank
 
     - name: Publish NuGet package
-      run: dotnet nuget push ./nuget/*.nupkg --source "github" --skip-duplicate
+      run: dotnet nuget push ./nuget/*.nupkg --source "github-packages" --api-key ${{ secrets.GITHUB_TOKEN }} --skip-duplicate
       working-directory: ./Bank
